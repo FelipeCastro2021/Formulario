@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Informa que o tipo do documento é HTML e informar a versão do HTML -->
+<html lang="pt-br"> <!-- Linguagem que o HTML vai estar -->
+<head> <!-- Contém informações sobre o arquivo -->
+    <meta charset="UTF-8"> <!-- Meta = metadados -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para dispositivos móveis -->
+    <link rel="stylesheet" type="text/css" href="css.css" media="screen">
+    <title> Formulário HTML e CSS </title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo"> Cadastro de DEV's </h1>
+        <p id="subtitulo"> Complete suas informações </p>
+        <br/>
+    </div>
+
+    <form action="index.html" method="GET">
+        <fieldset class="grupo"> <!-- Agrupador de campos -->
+            <div class="campo"> 
+                <label for="cNome"> <strong> Nome: </strong> </label> <!-- Strong: deixa ele com ênfase em negrito -->
+                <input type="text" name="tNome" id="cNome" required> <!-- A pessoa não poderá mandar o formulário se esse campo não estiver preenchido -->
+            </div>
+            <div class="campo">
+                <label for="cSobrenome"> <strong> Sobrenome: </strong> </label>
+                <input type="text" name="tSobrenome" id="cSobrenome" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="cEmail"> <strong> Email: </strong> </label>
+            <input type="email" name="tEmail" id="cEmail" required>
+        </div>
+
+        <div class="campo">
+            <label> <strong> De qual lado da aplicação você desenvolve: </strong> </label>
+            <label for="front">
+            <input type="radio" name="devweb" value="frontend" id="front" checked> Front-End
+        </label>
+        <label for="back">
+            <input type="radio" name="devweb" id="back" value="backend"> Back-End
+        </label>
+        <label for="full">
+            <input type="radio" name="devweb" id="full" value="fullstack"> Full Stack
+        </label>
+        </div>
+
+        <div class="campo">
+            <label for="selSenhoridade"> <strong> Senhoridade: </strong> </label>
+            <select name="senhoridade" id="selSenhoridade">
+                <option selected disabled value=""> Selecione uma das opções </option> <!-- Disable: desativa essa opção de escolha. Selected: quando abrir o site essa estará selecionada -->
+                <option value="JR"> Júnior </option>
+                <option value="PL"> Pleno </option>
+                <option value="SR"> Senior </option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label> <strong> Selecione as tecnologias que utiliza </strong> </label> <br> <br>
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                <label for="tecnologia1"> HTML </label>
+                <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+                <label for="tecnologia2"> CSS </label>
+                <input type="checkbox" name="tecnologia3" id="tecnologia3" value="Javascript">
+                <label for="tecnologia3"> Javascript </label>
+                <input type="checkbox" name="tecnologia4" id="tecnologia4" value="Java">
+                <label for="tecnologia4"> Java </label>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label for="experiencia"> <strong> Fale da sua experiência na área de informática </strong> </label>
+            <textarea name="experiencia" id="experiencia" cols="20" rows="5" style="width: 26em;"></textarea>
+        </div>
+
+        <button type="submit" class="botao"> Concluído </button>
+    </form>
+</body>
+</html>
